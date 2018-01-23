@@ -1,0 +1,7 @@
+#!/bin/bash
+echo -e "Give me name of text file, with .txt =P :"
+read file_name
+while read link; do
+    youtube-dl --hls-prefer-ffmpeg --extract-audio --audio-format mp3 $link
+done <$file_name
+
